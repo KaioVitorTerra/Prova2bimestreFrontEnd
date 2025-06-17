@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar - Conecta Voluntário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Conecta Voluntário</h1>
+    
+    <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="cadastro.html" class="active">Cadastrar</a>
+        <a href="visualizacao.html">Ver Necessidades</a>
+    </nav>
+
+    <h2 style="text-align: center;">Cadastrar Necessidade</h2>
+    <p style="text-align: center;">Preencha os campos abaixo:</p>
+
+    <form id="form" class="form">
+        <div class="field">
+            <label for="instituicao">Instituição *</label>
+            <input type="text" id="instituicao" required>
+            <div class="error" id="instituicaoError"></div>
+        </div>
+
+        <div class="field">
+            <label for="tipo">Tipo *</label>
+            <select id="tipo" required>
+                <option value="">Selecione</option>
+                <option value="Educação">Educação</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Meio Ambiente">Meio Ambiente</option>
+                <option value="Doação de Alimentos">Doação de Alimentos</option>
+                <option value="Doação de Roupas">Doação de Roupas</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <div class="error" id="tipoError"></div>
+        </div>
+
+    <div class="field">
+            <label for="titulo">Título *</label>
+            <input type="text" id="titulo" required>
+            <div class="error" id="tituloError"></div>
+        </div>
+
+        <div class="field">
+            <label for="descricao">Descrição *</label>
+            <textarea id="descricao" rows="3" required></textarea>
+            <div class="error" id="descricaoError"></div>
+        </div>
+
+        <div class="field">
+            <label for="cep">CEP *</label>
+            <input type="text" id="cep" placeholder="00000-000" required>
+            <div class="error" id="cepError"></div>
+        </div>
+
+        <div class="field">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" readonly>
+        </div>
+ <div class="field">
+            <label for="contato">Contato *</label>
+            <input type="text" id="contato" placeholder="email ou telefone" required>
+            <div class="error" id="contatoError"></div>
+        </div>
+
+        <div class="actions">
+            <button type="button" class="btn btn-secondary" onclick="limpar()">Limpar</button>
+            <button type="submit" class="btn">Cadastrar</button>
+        </div>
+    </form>
+
+    <div id="success" class="success" style="display: none;">
+        <h3>✅ Cadastrado com sucesso!</h3>
+        <p>Sua necessidade foi adicionada.</p>
+        <a href="visualizacao.html" class="btn">Ver Necessidades</a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
+       
