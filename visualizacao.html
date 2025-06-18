@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Necessidades - Conecta Voluntário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Conecta Voluntário</h1>
+    
+    <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="cadastro.html">Cadastrar</a>
+        <a href="visualizacao.html" class="active">Ver Necessidades</a>
+    </nav>
+
+    <h2 style="text-align: center;">Oportunidades de Voluntariado</h2>
+
+    <div class="filters">
+        <input type="text" id="search" placeholder="Pesquisar...">
+        <select id="filtro">
+            <option value="">Todos os tipos</option>
+            <option value="Educação">Educação</option>
+            <option value="Saúde">Saúde</option>
+            <option value="Meio Ambiente">Meio Ambiente</option>
+            <option value="Doação de Alimentos">Doação de Alimentos</option>
+            <option value="Doação de Roupas">Doação de Roupas</option>
+            <option value="Outros">Outros</option>
+        </select>
+        <button onclick="filtrar()">Buscar</button>
+        <button onclick="limparFiltros()">Limpar</button>
+    </div>
+
+
