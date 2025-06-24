@@ -205,3 +205,25 @@ p {
     color: #666;
     padding: 40px 20px;
 }
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .filters input,
+    .filters select,
+    .filters button {
+        width: 100%;
+        margin: 3px 0;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
