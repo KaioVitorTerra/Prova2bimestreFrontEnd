@@ -37,3 +37,38 @@ async function buscarCEP(cep) {
         showError('cep', 'CEP inválido');
     }
 }
+function validar() {
+    clearErrors();
+    let ok = true;
+
+    const campos = [
+        { id: 'instituicao', nome: 'Instituição' },
+        { id: 'tipo', nome: 'Tipo' },
+        { id: 'titulo', nome: 'Título' },
+        { id: 'descricao', nome: 'Descrição' },
+        { id: 'cep', nome: 'CEP' },
+        { id: 'contato', nome: 'Contato' }
+    ];
+
+    campos.forEach(campo => {
+        const valor = document.getElementById(campo.id).value.trim();
+        if (!valor) {
+            showError(campo.id, campo.nome + ' é obrigatório');
+            ok = false;
+        }
+    });
+
+    const cep = document.getElementById('cep').value.trim();
+    if (cep && !validCEP(cep)) {
+        showError('cep', 'CEP inválido');
+        ok = false;
+    }
+
+    const contato = document.getElementById('contato').value.trim();
+    if (contato && !validEmail(contato) && !validPhone(contato)) {
+        showError('contato', 'Email ou telefone inválido');
+        ok = false;
+    }
+
+    return ok;
+}
