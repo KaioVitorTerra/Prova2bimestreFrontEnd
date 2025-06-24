@@ -72,3 +72,28 @@ function validar() {
 
     return ok;
 }
+function salvar() {
+    const item = {
+        id: Date.now(),
+        instituicao: document.getElementById('instituicao').value.trim(),
+        tipo: document.getElementById('tipo').value,
+        titulo: document.getElementById('titulo').value.trim(),
+        descricao: document.getElementById('descricao').value.trim(),
+        cep: document.getElementById('cep').value.trim(),
+        cidade: document.getElementById('cidade').value.trim(),
+        contato: document.getElementById('contato').value.trim(),
+        data: new Date().toLocaleDateString('pt-BR')
+    };
+
+    dados.push(item);
+    localStorage.setItem('necessidades', JSON.stringify(dados));
+    
+    document.getElementById('form').style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+}
+
+function limpar() {
+    document.getElementById('form').reset();
+    document.getElementById('cidade').value = '';
+    clearErrors();
+}
