@@ -37,3 +37,21 @@ p {
     margin-bottom: 15px;
     color: #666;
 }
+.nav {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.nav a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.nav a:hover,
+.nav a.active {
+    text-decoration: underline;
+}
